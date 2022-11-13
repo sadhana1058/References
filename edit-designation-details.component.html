@@ -1,0 +1,58 @@
+<app-home></app-home>
+
+<div id="InsideLoginDiv" style="margin-left:17.5rem; margin-right: 1em;">
+    <h1>Edit an designation</h1>
+    <form  [formGroup]="DesForm">
+        <table class="table table-bordered">           
+            <tbody>
+                <tr>
+                    <th >Designation Name</th>
+                    <td>
+                        <div class="form-outline mb-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">{{eDesg.designationName}}</span>
+                                </div>
+                            <input formControlName="DesignationName" value="{{eDesg.designationName}}" type="text" class="form-control form-control-lg">                 
+                        </div></div>
+                    </td>
+                </tr>
+              <tr>
+                <th  style="width:240px" scope="col">Role</th>
+                <td >
+                    <div class="form-outline mb-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">{{eDesg.designationRole}}</span>
+                    </div>
+                        <input formControlName="DesignationRole" type="text" class="form-control form-control-lg" >                       
+                            </div></div>
+
+                </td>
+              </tr>  
+              <tr>
+                <th  style="width:240px" scope="col">Department</th>
+                <td >
+                    <div class="form-outline mb-4">
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">{{eDesg.designationDepartment}}</span>
+                          </div>
+                        <input formControlName="DesignationDepartment" type="text" class="form-control form-control-lg" >                       
+                    </div>
+                    </div>
+                </td>
+              </tr>      
+               
+            </tbody>
+          </table> 
+        
+         
+          <!---<button type="submit" [disabled]="loginForm.invalid" -->
+          <button type="submit" (click)="onSubmit()" class="btn"  style="background-color:#001f54; padding:2px;color: azure;">Submit</button>
+        
+        
+      </form>
+    
+
+</div>
