@@ -1,0 +1,44 @@
+<app-home></app-home>
+
+<div id="InsideLoginDiv" style="margin-left:17.5rem; margin-right: 1em;">
+    <h1>Create a Payment Rule</h1>
+    <form  [formGroup]="createPRForm">
+        <table class="table table-bordered">           
+            <tbody>
+                <tr>
+                    <th >Rule</th>
+                    <td>
+                        <div class="form-outline mb-4">
+                        <input formControlName="PaymentRuleDetail" type="text" class="form-control form-control-lg">                 
+                        </div>
+                    </td>
+                </tr>
+              <tr>
+                <th  style="width:240px" scope="col">Type</th>
+                <td >
+                    <div class="form-outline mb-4">
+                           <!-- <select name="">
+                            <option value ="none">Nothing</option>
+                            <option value ="guava">Guava</option>
+                            <option value ="lychee">Lychee</option>
+                            <option value ="papaya">Papaya</option>
+                            <option value ="watermelon">Watermelon</option>
+                            </select>--> 
+                           
+                        <input formControlName="PaymentRuleType" type="text" class="form-control form-control-lg" >                       
+                    </div>
+                </td>
+              </tr>  
+               
+            </tbody>
+          </table> 
+        
+         
+          <!---<button type="submit" [disabled]="loginForm.invalid" -->
+          <button type="submit" (click)="onSubmit()" class="btn"  style="background-color:#001f54; padding:2px;color: azure;">Submit</button>
+        
+        
+      </form>
+    
+
+</div>
